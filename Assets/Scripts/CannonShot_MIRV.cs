@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CannonShot_MIRV : CannonShotController
 {
+    // INHERITANCE of parent CannonShotController 
 
     [SerializeField] private GameObject spreadShot;
 
@@ -40,6 +41,7 @@ public class CannonShot_MIRV : CannonShotController
         return new Vector3(transform.position.x, transform.position.y + newY, transform.position.z + newZ);
     }
 
+    // POLYMORPHISM - Overriding the remove self routine to implement special actions
     protected override IEnumerator RemoveSelfRoutine()
     {
         yield return new WaitForSeconds(timeTillDeath);

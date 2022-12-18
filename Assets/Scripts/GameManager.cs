@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    // ENCAPSULATION
     public float horizontalBound { get { return 15.0f; } }
     public float currentAmmo { get; set; }
     public float startingAmmo { get { return 20; } }

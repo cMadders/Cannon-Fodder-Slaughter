@@ -37,7 +37,8 @@ public class CannonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // ABSTRACTION - Moved movement and firing code to their own methods
+
         HandleMovement();
 
         // Check if game is over
