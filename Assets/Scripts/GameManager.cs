@@ -7,16 +7,17 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    public float horizontalBound = 15.0f;
-    public float currentAmmo;
-    public float startingAmmo = 20;
-    public int HighScore;
+    public float horizontalBound { get { return 15.0f; } }
+    public float currentAmmo { get; set; }
+    public float startingAmmo { get { return 20; } }
+
+    private int HighScore;
     public int currentScore;
     public int PreviousScore;
 
-    public Text ammo;
-    public Text HighScoreText;
-    public Text PreviousScoreText;
+    [SerializeField] private Text ammo;
+    [SerializeField] private Text HighScoreText;
+    [SerializeField] private Text PreviousScoreText;
 
     // Start is called before the first frame update
     void Start()

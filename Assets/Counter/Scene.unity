@@ -687,7 +687,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 5, y: -11.999939}
+  m_AnchoredPosition: {x: 5, y: -11.999954}
   m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &204294542
@@ -3782,7 +3782,8 @@ MonoBehaviour:
   maxPower: 1000
   powerIncrementer: 100
   activeCannon: {fileID: 2103721339}
-  activeShot: {fileID: 6705745465705069674, guid: 58ec7176e407a01499494ae57226d6fe, type: 3}
+  basicShot: {fileID: 6705745465705069674, guid: 58ec7176e407a01499494ae57226d6fe, type: 3}
+  mirvShot: {fileID: 87469139380407832, guid: 493afc2b42bee6940808e5f141b56442, type: 3}
   firePoint: {fileID: 865514537}
   manager: {fileID: 1489512102}
 --- !u!1 &1357351969

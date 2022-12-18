@@ -8,8 +8,8 @@ public class GoalController : MonoBehaviour
     private float zRange;
     [SerializeField] private float speed = 10.0f;
 
-    public GameObject com;
-    public GameManager manager;
+    [SerializeField] private GameObject com;
+    [SerializeField] private GameManager manager;
 
     // Start is called before the first frame update
     void Start()

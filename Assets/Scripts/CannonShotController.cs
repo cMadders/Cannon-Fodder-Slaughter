@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CannonShotController : MonoBehaviour
 {
-    public ParticleSystem explosionParticles;
-    public GameManager manager;
+    [SerializeField] protected ParticleSystem explosionParticles;
+    [SerializeField] private GameManager manager;
+    protected float timeTillDeath = 1.0f;
 
 
     // Start is called before the first frame update
@@ -28,9 +29,14 @@ public class CannonShotController : MonoBehaviour
         }
     }
 
-    IEnumerator RemoveSelfRoutine()
+    // Any child object will have a special action that must take place
+    protected virtual void DoSpecialAction()
     {
-        yield return new WaitForSeconds(2);
+    }
+
+    protected virtual IEnumerator RemoveSelfRoutine()
+    {
+        yield return new WaitForSeconds(timeTillDeath);
         ParticleSystem explosion = Instantiate(explosionParticles,transform.position,transform.rotation);
         GameObject[] shotsOnField = GameObject.FindGameObjectsWithTag("Projectile");
 
