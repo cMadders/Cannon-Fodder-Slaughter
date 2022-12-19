@@ -14,7 +14,7 @@ public class CannonShot_MIRV : CannonShotController
     // Start is called before the first frame update
     void Awake()
     {
-        timeTillDeath = .25f;
+        timeTillDeath = .5f;
         StartCoroutine(RemoveSelfRoutine());
     }
 
