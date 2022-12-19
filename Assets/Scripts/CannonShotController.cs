@@ -9,10 +9,19 @@ public class CannonShotController : MonoBehaviour
     protected float timeTillDeath = 1.0f;
 
 
+    public AudioSource shotSource;
+    public AudioClip shotSound;
+    public AudioClip groundSound;
+
     // Start is called before the first frame update
     void Start()
     {
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        shotSource = GetComponent<AudioSource>();
+
+        Debug.Log(shotSound.length);
+        shotSource.PlayOneShot(shotSound,50.0f);
     }
 
     // Update is called once per frame
@@ -25,6 +34,7 @@ public class CannonShotController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground"))
         {
+            shotSource.PlayOneShot(groundSound,25.0f);
             StartCoroutine(RemoveSelfRoutine());
         }
     }
